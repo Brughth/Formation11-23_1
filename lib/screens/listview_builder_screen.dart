@@ -8,6 +8,7 @@ class ListViewBuilderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SafeArea(
         child: ListView.builder(
           itemCount: items.length,
@@ -16,7 +17,7 @@ class ListViewBuilderScreen extends StatelessWidget {
             var item = items[index];
             return ListTile(
               leading: CircleAvatar(),
-              title: Text("Title $index"),
+              title: Text("Title $item"),
               subtitle: Text(" Description du Title $index"),
               trailing: const Icon(Icons.arrow_forward_ios),
             );
